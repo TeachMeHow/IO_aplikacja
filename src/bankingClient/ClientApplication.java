@@ -27,13 +27,6 @@ public class ClientApplication {
 		{
 			// add to address book
 		}
-		
-		
-		asokdjoghwfjw
-		gfnosigodshn
-		nsodignosngo
-		nsodignsdongosng
-		
 	}
 		
 	
