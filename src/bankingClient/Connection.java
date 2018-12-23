@@ -15,6 +15,10 @@ public class Connection {
 	private String hostName;
 	private int port;
 	
+	//TEST NA GITA
+	//DRUGI TEST NA GITA
+	//TRZECI TEST NA GITA
+	//CZWARTY TEST NA GITA
 	Connection()
 	{
 		readConfig();
