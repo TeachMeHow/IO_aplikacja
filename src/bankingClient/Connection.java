@@ -5,7 +5,6 @@ import java.io.DataOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.net.*;
 public class Connection {
 	// TODO maybe return bool if file not read?
