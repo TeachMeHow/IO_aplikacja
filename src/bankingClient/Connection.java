@@ -1,18 +1,47 @@
 package bankingClient;
-import java.nio.file.*;
+import java.util.Properties;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
 import java.net.*;
-import java.io.*;
-
 public class Connection {
 	// TODO maybe return bool if file not read?
-	private String config_filename;
 	private void readConfig() {
 		// open filename
 		// read to attributes
+		try
+		{
+			Properties properties = new Properties();
+
+			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(config_filename);
+			
+			if (inputStream != null)
+			{
+				properties.load(inputStream);
+				host = properties.getProperty("host");
+				port = Integer.valueOf(properties.getProperty("port"));
+			}
+			else
+			{
+				throw new FileNotFoundException("Configuration file not found under \"" + config_filename + "\"");
+			}
+		}
+		catch (Exception e)
+		{
+			System.out.println("Exception: " + e);
+		}
 	}
 	private Socket socket;
-	private InetAddress host;
-	private String hostName;
+	private DataOutputStream out;
+	private DataInputStream in;
+	private String config_filename = "../connection.properties";
+	
+	//TODO change InetAddress to String in diagrams
+	private String host;
+	//TODO remove hostName from diagrams
 	private int port;
 	
 	//TEST NA GITA
@@ -21,16 +50,29 @@ public class Connection {
 	//CZWARTY TEST NA GITA
 	Connection()
 	{
-		readConfig();
+		try {
+			readConfig();
+			connect();
+		} catch(Exception e)
+		{
+			System.out.println("Connection unsuccessful");
+			e.printStackTrace();
+		}
 	}
 	
-	public void connect()
+	//TODO change to private in diagrams
+	public void connect() throws UnknownHostException, IOException
 	{
-		// create socket
+		socket = new Socket(host, port);
+		out = new DataOutputStream(socket.getOutputStream());
+		in = new DataInputStream(socket.getInputStream());
+		
 	}
-	public void sendRequest(String request)
+	
+	//TODO change sendRequest to include response, get rid of getResponse method in diagrams
+	public void sendRequest(String request) throws IOException
 	{
-		// send request to server
+		out.writeBytes(request);
 	}
 	
 	
