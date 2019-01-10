@@ -44,6 +44,10 @@ public class Connection {
 	//TODO remove hostName from diagrams
 	private int port;
 	
+	//TEST NA GITA
+	//DRUGI TEST NA GITA
+	//TRZECI TEST NA GITA
+	//CZWARTY TEST NA GITA
 	Connection()
 	{
 		try {

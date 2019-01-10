@@ -30,7 +30,6 @@ public class ClientApplication {
 		{
 			//TODO add to address book
 		}
-		
 	}
 		
 	
