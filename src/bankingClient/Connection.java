@@ -67,6 +67,7 @@ public class Connection {
 		out = new DataOutputStream(socket.getOutputStream());
 		in = new DataInputStream(socket.getInputStream());
 		
+		
 	}
 	
 	//TODO change sendRequest to include response, get rid of getResponse method in diagrams

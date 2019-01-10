@@ -5,10 +5,12 @@ public class TransferSender {
 	TransferSender(Connection connection)
 	{
 		this.connection = connection;
+		
 	}
 	void execute(Transfer transfer)
 	{
-		// send request using connection
+		String request="1|3|453";
+		connection.sendRequest(request);
 		
 	}
 	

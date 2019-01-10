@@ -5,6 +5,12 @@ public class Account{
     AccountType accountType;
     Currency amount;
 
+    public void remove_money(int reduceBy){
+        //amount = amount - reduceBy
+    }
+    public void add_money(int add){
+        //amount = amount + add
+    }
     /**
      * @return the number
      */
