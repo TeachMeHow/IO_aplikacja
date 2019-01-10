@@ -8,7 +8,9 @@ public class TransferSender {
 	}
 	void execute(Transfer transfer)
 	{
-		// send request using connection
+		String request;
+		
+		connection.sendRequest(request);
 		
 	}
 	
