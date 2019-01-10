@@ -14,6 +14,7 @@ public class ClientApplication {
 	{
 		connection = new Connection();
 	}
+	
 	public void sendTransfer(String sourceAccount,
 			String destinationAccount, 
 			Currency amount, 
@@ -23,17 +24,12 @@ public class ClientApplication {
 			boolean rememberRecipient) {
 		Transfer transfer = new Transfer(sourceAccount, destinationAccount, amount, title, type, recipientName);
 		TransferSender sender = new TransferSender(this.connection);
+		sender.execute(transfer);
+		
 		if (rememberRecipient)
 		{
-			// add to address book
+			//TODO add to address book
 		}
-		sfsdhdgophds
-		fsoidhfosdj
-		fnsoddd
-		dd
-		d
-		
-		ddd
 		
 	}
 		
