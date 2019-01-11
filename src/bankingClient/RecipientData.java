@@ -1,3 +1,4 @@
+package bankingClient;
 public class RecipientData{
     String accountNumber;
     String name;

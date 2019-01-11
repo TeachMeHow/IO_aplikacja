@@ -1,3 +1,4 @@
+package bankingClient;
 public class Operation{
     String timestamp;
     String destination;

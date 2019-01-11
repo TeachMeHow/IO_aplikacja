@@ -1,5 +1,6 @@
+package bankingClient;
 public class SpecialRequestCreator implements RequestCreator{
     String complaint;
 
-    boolean create(){return true;}
+    public boolean create(){return true;}
 }

@@ -1,3 +1,4 @@
+package bankingClient;
 public class Address{
     String streetADdress;
     String addressLine2;

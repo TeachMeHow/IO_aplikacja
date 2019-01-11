@@ -1,4 +1,6 @@
+package bankingClient;
 public class CreditCardCreator implements RequestCreator{
 
-    boolean create(){}
+    public boolean create(){
+		return false;}
 }
