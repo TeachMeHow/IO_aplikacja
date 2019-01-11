@@ -5,7 +5,6 @@ import java.io.DataOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.net.*;
 public class Connection {
 	// TODO maybe return bool if file not read?
@@ -44,10 +43,6 @@ public class Connection {
 	//TODO remove hostName from diagrams
 	private int port;
 	
-	//TEST NA GITA
-	//DRUGI TEST NA GITA
-	//TRZECI TEST NA GITA
-	//CZWARTY TEST NA GITA
 	Connection()
 	{
 		try {
@@ -72,7 +67,15 @@ public class Connection {
 	//TODO change sendRequest to include response, get rid of getResponse method in diagrams
 	public void sendRequest(String request) throws IOException
 	{
+		// TODO program this
 		out.writeBytes(request);
+	}
+	//TODO program getting response
+	public String getResponse()
+	{
+		// read from in
+		// 1.3.2
+		return new String();
 	}
 	
 	
