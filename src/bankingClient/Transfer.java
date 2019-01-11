@@ -19,7 +19,7 @@ public class Transfer {
 		return recipientName;
 	}
 
-	public Currency getAmount() {
+	public int getAmount() {
 		return amount;
 	}
 
@@ -38,14 +38,14 @@ public class Transfer {
 	private String destinationAccount;
 	private String title;
 	private String recipientName;
-	private Currency amount;
+	private int amount;
 	private TransferType type;
 
 	private enum TransferType {
 		OWN, EXTERNAL, INTERNATIONAL
 	}
 
-	Transfer(String sourceAccount, String destinationAccount, Currency amount, String title, int type,
+	Transfer(String sourceAccount, String destinationAccount, int amount, String title, int type,
 			String recipientName) {
 		this.sourceAccount = sourceAccount;
 		this.destinationAccount = destinationAccount;

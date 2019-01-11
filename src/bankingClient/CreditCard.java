@@ -1,3 +1,4 @@
+package bankingClient;
 public class CreditCard{
     String number;
     int CVV;

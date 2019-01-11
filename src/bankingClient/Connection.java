@@ -36,7 +36,7 @@ public class Connection {
 	private Socket socket;
 	private DataOutputStream out;
 	private DataInputStream in;
-	private String config_filename = "../connection.properties";
+	private String config_filename = "connection.properties";
 	
 	//TODO change InetAddress to String in diagrams
 	private String host;
@@ -58,9 +58,9 @@ public class Connection {
 	//TODO change to private in diagrams
 	public void connect() throws UnknownHostException, IOException
 	{
-		socket = new Socket(host, port);
-		out = new DataOutputStream(socket.getOutputStream());
-		in = new DataInputStream(socket.getInputStream());
+		//socket = new Socket(host, port);
+		//out = new DataOutputStream(socket.getOutputStream());
+		//in = new DataInputStream(socket.getInputStream());
 		
 	}
 	
@@ -68,7 +68,7 @@ public class Connection {
 	public void sendRequest(String request) throws IOException
 	{
 		// TODO program this
-		out.writeBytes(request);
+		// out.writeBytes(request);
 	}
 	//TODO program getting response
 	public String getResponse()

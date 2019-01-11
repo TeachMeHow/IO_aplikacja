@@ -22,7 +22,7 @@ public class TransferSender {
 		requestBuilder.append("source=" + transfer.getSourceAccount() + '\n');
 		requestBuilder.append("title=" + transfer.getTitle() + '\n');
 		requestBuilder.append("type=" + String.valueOf(transfer.getType()) + '\n');
-		requestBuilder.append("amount=" + transfer.getAmount().toString());
+		requestBuilder.append("amount=" + String.valueOf(transfer.getAmount()));
 		try {
 			// 2.
 			connection.sendRequest(request);

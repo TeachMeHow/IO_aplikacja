@@ -1,3 +1,4 @@
+package bankingClient;
 public enum BankAccountType{
     OSOBISTE,
     FIRMOWE,

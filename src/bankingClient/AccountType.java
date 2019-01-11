@@ -1,3 +1,5 @@
+
+package bankingClient;
 public enum AccountType{
     ROZLICZENIOWY,
     LOKAT_TERMINOWYCH,

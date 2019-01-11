@@ -1,5 +1,6 @@
-public class RequestCreator{
-    boolean isVerified;
+package bankingClient;
+public interface RequestCreator{
+    boolean isVerified=false;
 
-    boolean create(){return false;}
+    boolean create();
 }
