@@ -10,6 +10,7 @@ public class TransferSender {
 	TransferSender(Connection connection)
 	{
 		this.connection = connection;
+		
 	}
 	boolean execute(Transfer transfer)
 	{

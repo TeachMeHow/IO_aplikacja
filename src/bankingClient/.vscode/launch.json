@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ClientApplicationGUI",
+            "request": "launch",
+            "mainClass": "ClientApplicationGUI"
+        }
+    ]
+}

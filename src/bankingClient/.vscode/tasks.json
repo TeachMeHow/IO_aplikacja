@@ -24,7 +24,11 @@
                 "command": "C:\\Program Files\\Java\\jdk-11.0.1\\bin\\java.exe"
             },
             "args": [
+<<<<<<< HEAD
                 "${fileBasenameNoExtension}.class"
+=======
+                "${fileBasenameNoExtension}"
+>>>>>>> 469c828b287255743f09bb2771649d6a037aa067
             ],
             "problemMatcher": []
         }

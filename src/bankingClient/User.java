@@ -21,4 +21,32 @@ public class User{
         RecipientData rData = new RecipientData(accountNumber, name);
         return rData;
     }
+
+    /**
+     * @return the userID
+     */
+    public UserID getUserID() {
+        return userID;
+    }
+
+    /**
+     * @param userID the userID to set
+     */
+    public void setUserID(UserID userID) {
+        this.userID = userID;
+    }
+
+    /**
+     * @return the bankAccountType
+     */
+    public BankAccountType getBankAccountType() {
+        return bankAccountType;
+    }
+
+    /**
+     * @param bankAccountType the bankAccountType to set
+     */
+    public void setBankAccountType(BankAccountType bankAccountType) {
+        this.bankAccountType = bankAccountType;
+    }
 }
