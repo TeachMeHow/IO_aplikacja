@@ -45,6 +45,14 @@ public class Transfer {
 		OWN, EXTERNAL, INTERNATIONAL
 	}
 
+	/** 
+	 * @param sourceAccount
+	 * @param destinationAccount
+	 * @param amount
+	 * @param title
+	 * @param type (0 wlasny, 1 - zewnetrzyny, 2 miedzynarodowy)
+	 * @param recipientName
+	 */
 	Transfer(String sourceAccount, String destinationAccount, int amount, String title, int type,
 			String recipientName) {
 		this.sourceAccount = sourceAccount;
