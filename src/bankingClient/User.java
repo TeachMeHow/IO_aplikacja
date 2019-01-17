@@ -1,16 +1,20 @@
 package bankingClient;
+
+import java.util.ArrayList;
+
 public class User{
     UserID userID;
     UserData userData;
-    Account account;
+    private ArrayList<Account> accounts;
     BankAccountType bankAccountType;
-
+    private String pin;
     User(){}
     User(User user){}
-    User(UserData userData, UserID id, Account account){
+    User(UserData userData, UserID id, ArrayList<Account>  accounts, String pin){
     	this.userData = userData;
     	this.userID = id;
-    	this.account = account;
+    	this.setAccounts(accounts);
+    	this.pin = pin;
     }
 
     boolean editUserData(){return true;}
@@ -49,4 +53,16 @@ public class User{
     public void setBankAccountType(BankAccountType bankAccountType) {
         this.bankAccountType = bankAccountType;
     }
+	public ArrayList<Account> getAccounts() {
+		return accounts;
+	}
+	public void setAccounts(ArrayList<Account> accounts) {
+		this.accounts = accounts;
+	}
+	public String getPin() {
+		return pin;
+	}
+	public void setPin(String pin) {
+		this.pin = pin;
+	}
 }
