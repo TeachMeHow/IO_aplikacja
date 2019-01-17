@@ -129,36 +129,3 @@ public class ClientApplication {
 	
 
 }
-
-class TransferMenu{
-    private static final Object[] String = null;
-	String address;
-    String name;
-    String surname;
-    String title;
-    String accountNumber;
-    String amount;
-    String cur;
-    public String[] main_Loop(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("\t\t\tPodaj dane adresata...");
-        //Thread.sleep(1000);
-        System.out.println("\nImie...");
-        name = input.next();
-        System.out.println("\n...Nazwisko...");
-        surname = input.next();
-        System.out.println("\n...Adres...");
-        address = input.next();
-        System.out.println("\nTytul...");
-        title = input.next();
-        System.out.println("\nPodaj numer konta...");
-        accountNumber = input.next();
-        System.out.println("\nKwota...");
-        amount = input.next();
-        System.out.println("\nWaluta");
-        String df = input.next();
-		String[] toReturn = {name, surname, address, title, accountNumber, amount, cur};
-		return toReturn;
-        
-    }
-}
