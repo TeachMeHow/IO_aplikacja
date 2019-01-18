@@ -3,11 +3,11 @@ package bankingClient;
 
 public class Verifier {
 
-	private final static int MAX_TRIES = 3;
+	public final static int MAX_TRIES = 3;
 	private int tries = 0;
 	private String correctPin;
 	//TODO other attributes and methods
-	Verifier(String pin)
+	public Verifier(String pin)
 	{
 		correctPin = pin;
 	}
@@ -16,6 +16,11 @@ public class Verifier {
 		if (tries >= MAX_TRIES) return false;
 		tries++;
 		return pin == correctPin;
+	}
+	public int getRemainingTries()
+	{
+		int remainingTries = MAX_TRIES - tries;
+		return remainingTries > 0 ? remainingTries : 0;
 	}
 	
 }

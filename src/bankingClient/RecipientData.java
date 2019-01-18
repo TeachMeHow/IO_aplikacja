@@ -5,7 +5,7 @@ public class RecipientData{
 
     //String toString(){}   //sypie błędem
     RecipientData(String accountNumber, String name){}
-    RecipientData(String accountNumber, String name, Address address){}
+    public RecipientData(String accountNumber, String name, Address address){}
 
     /**
      * @return the accountNumber

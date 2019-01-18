@@ -7,7 +7,7 @@ public class Account{
     int amount;
     Currency cur;
     
-    Account(String number, AccountType aType, Currency cur, int amount){
+    public Account(String number, AccountType aType, Currency cur, int amount){
     	this.number = number;
     	this.accountType = aType;
     	this.amount = amount;

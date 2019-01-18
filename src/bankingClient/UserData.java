@@ -1,11 +1,15 @@
 package bankingClient;
 public class UserData{
-    String emailAddress;
-    String phoneNumber;
+    private String emailAddress;
+    private String phoneNumber;
+    private UserID userID;
+    private Address address;
     
-    UserData(String eAddr, String phone){
+    public UserData(String eAddr, String phone, UserID userID, Address address){
     	this.emailAddress = eAddr;
     	this.phoneNumber = phone;
+    	this.setUserID(userID);
+    	this.setAddress(address);
     }
 
     /**
@@ -35,5 +39,21 @@ public class UserData{
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+	public UserID getUserID() {
+		return userID;
+	}
+
+	public void setUserID(UserID userID) {
+		this.userID = userID;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 }

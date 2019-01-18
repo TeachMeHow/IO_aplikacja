@@ -1,6 +1,8 @@
 package bankingClient;
 import java.util.Date;
-public class UserID{
+public class UserID {
+	public final static char MALE = 'm';
+	public final static char FEMALE = 'f';
     String surname;
     String givenNames[];		
     String familyName;
@@ -15,7 +17,7 @@ public class UserID{
     Date dateOfIssue;
     Date expiryDate;
     
-    UserID(String surname, String givenNames[], String familyName, String parentsGivenNames[],
+    public UserID(String surname, String givenNames[], String familyName, String parentsGivenNames[],
     		String PESEL, Date dateOfBirth, char sex, String nationality, String placeOfBirth,
     		String issuingAuthority, String IDCardNumber, Date dateOfIssue, Date expiryDate)
     {

@@ -21,7 +21,7 @@ public class ClientApplication {
 		// application.sendTransfer(sourceAccount, destinationAccount, amount, title,
 		// type, recipientName, rememberRecipient);
 
-		UserData clientData = new UserData("dumledore@hogwarts.com", "913929422");
+		UserData clientData = new UserData("dumledore@hogwarts.com", "913929422", null, null);
 		String clientNames[] = { "Albus", "Percival", "Wulfrick", "Brian" };
 		String clientParentNames[] = { "Percival", "Kendra" };
 		@SuppressWarnings("deprecation")
@@ -35,7 +35,7 @@ public class ClientApplication {
 
 		ArrayList<Account> accounts = new ArrayList<>();
 		accounts.add(new Account("1234090209097757", AccountType.ROZLICZENIOWY, Currency.getInstance(Locale.UK), 0));
-		User newUser = new User(clientData, clientID, accounts, "1234");
+		User newUser = new User(clientData, accounts, "1234");
 
 		System.out.println(accounts.get(0).accountType);
 
@@ -104,14 +104,14 @@ public class ClientApplication {
 		 */
 		// 1.1
 		Transfer transfer = new Transfer(sourceAccount, destinationAccount, amount, title, type, recipientName);
-		TransferSender sender = new TransferSender(this.connection);
+		TransferSender sender = new TransferSender(this.connection, transfer);
 		/*
 		 * Extension point - nie trzeba na teraz // 1.2 if (rememberRecipient) { //TODO
 		 * add to address book }
 		 */
 
 		// 4.
-		sender.execute(transfer);
+		sender.execute();
 		// 5.
 		transfer = null;
 

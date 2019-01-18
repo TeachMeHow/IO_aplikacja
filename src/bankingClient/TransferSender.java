@@ -2,6 +2,7 @@ package bankingClient;
 
 import java.io.IOException;
 
+// TODO Update class diagram
 public class TransferSender {
 	//TODO define success and failure
 	private static final String SUCCESS = "";

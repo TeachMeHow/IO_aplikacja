@@ -1,24 +1,40 @@
 package bankingClient;
 public class Address{
-    String streetADdress;
+    String streetAddress;
     String addressLine2;
     String city;
     String postalCode;
     String voivodeship;
     String country;
 
+    public Address(
+    String streetAddress,
+    String addressLine2,
+    String city,
+    String postalCode,
+    String voivodeship,
+    String country)
+    {
+
+        this.streetAddress = streetAddress;
+        this.addressLine2 = addressLine2;
+        this.city = city;
+        this.postalCode = postalCode;
+        this.voivodeship = voivodeship;
+        this.country = country;
+    }
     /**
      * @return the streetADdress
      */
-    public String getStreetADdress() {
-        return streetADdress;
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
     /**
      * @param streetADdress the streetADdress to set
      */
-    public void setStreetADdress(String streetADdress) {
-        this.streetADdress = streetADdress;
+    public void setStreetAddress(String streetADdress) {
+        this.streetAddress = streetADdress;
     }
 
     /**

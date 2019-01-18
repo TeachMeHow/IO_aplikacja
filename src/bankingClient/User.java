@@ -2,44 +2,22 @@ package bankingClient;
 
 import java.util.ArrayList;
 
+// TODO remove UserID userID from master
 public class User{
-    UserID userID;
     UserData userData;
     private ArrayList<Account> accounts;
     BankAccountType bankAccountType;
     private String pin;
-    User(){}
+    private ArrayList<RecipientData> addressBook = null;
+    public User(){}
     User(User user){}
-    User(UserData userData, UserID id, ArrayList<Account>  accounts, String pin){
+    public User(UserData userData, ArrayList<Account>  accounts, String pin){
     	this.userData = userData;
-    	this.userID = id;
     	this.setAccounts(accounts);
     	this.pin = pin;
     }
 
     boolean editUserData(){return true;}
-    void addRecipient(String address, String accountNumber, String name){}
-    RecipientData getRecipientsMatching(String phrase){
-    	String accountNumber = "FILL_IN";
-    	String name = "ALSO_FILL_IN";
-        RecipientData rData = new RecipientData(accountNumber, name);
-        return rData;
-    }
-
-    /**
-     * @return the userID
-     */
-    public UserID getUserID() {
-        return userID;
-    }
-
-    /**
-     * @param userID the userID to set
-     */
-    public void setUserID(UserID userID) {
-        this.userID = userID;
-    }
-
     /**
      * @return the bankAccountType
      */
@@ -64,5 +42,32 @@ public class User{
 	}
 	public void setPin(String pin) {
 		this.pin = pin;
+	}
+	
+	public void addRecipient(RecipientData recipient)
+	{
+		if (addressBook == null)
+		{
+			addressBook = new ArrayList<>();
+		}
+		addressBook.add(recipient);
+	}
+	public RecipientData[] getRecipientsMatching(String phrase)
+	{
+		if (addressBook == null)
+			return null;
+		ArrayList<RecipientData> resultAL = new ArrayList<>();
+		for (var data : addressBook)
+		{
+			if (data.getName().contains(phrase) 
+					|| data.getAccountNumber().contains(phrase))
+			{
+				resultAL.add(data);
+			}
+		}
+		RecipientData[] result = new RecipientData[resultAL.size()];
+		result = resultAL.toArray(result);
+		return result;
+		
 	}
 }
